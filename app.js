@@ -5,10 +5,10 @@ var app = express();
 // Middleware to parse JSON bodies
 app.use(express.json());
 
-app.use('/', router);
-
 // Example router
 const router = express.Router();
+
+app.use('/', router);
 
 const port = process.env.PORT || 3000
 app.listen(port, () => {
